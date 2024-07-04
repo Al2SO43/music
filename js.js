@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
     const apiUrls = [
-        'https://meting-api.mnchen.cn/?type=playlist&id=3778678',
-        'https://meting-api.mnchen.cn/?type=playlist&id=3779629',
-        'https://meting-api.mnchen.cn/?type=playlist&id=19723756',
-        'https://meting-api.mnchen.cn/?type=playlist&id=913908853',
-        'https://meting-api.mnchen.cn/?type=playlist&id=2003672301',
-        'https://meting-api.mnchen.cn/?type=playlist&id=64321632',
-        'https://meting-api.mnchen.cn/?type=playlist&id=26467411',
-        'https://meting-api.mnchen.cn/?type=playlist&id=947776380',
-        'https://meting-api.mnchen.cn/?type=playlist&id=2036189106',
+        'https://api.injahow.cn/meting/?type=playlist&id=3778678',
+        'https://api.injahow.cn/meting/?type=playlist&id=3779629',
+        'https://api.injahow.cn/meting/?type=playlist&id=19723756',
+        'https://api.injahow.cn/meting/?type=playlist&id=913908853',
+        'https://api.injahow.cn/meting/?type=playlist&id=2003672301',
+        'https://api.injahow.cn/meting/?type=playlist&id=64321632',
+        'https://api.injahow.cn/meting/?type=playlist&id=26467411',
+        'https://api.injahow.cn/meting/?type=playlist&id=947776380',
+        'https://api.injahow.cn/meting/?type=playlist&id=2036189106',
     ];
 
     apiUrls.forEach((apiUrl, index) => {
@@ -36,3 +36,12 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     });
 });
+function displayTime() {
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, timeZone: 'Asia/Shanghai' };
+    const beijingTime = new Date().toLocaleString('zh-CN', options);
+    document.getElementById('datetime').textContent = beijingTime;
+  }
+  
+  setInterval(displayTime, 1000);
+  
+  displayTime();

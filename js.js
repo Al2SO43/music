@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
     const apiUrls = [
-        'https://api.injahow.cn/meting/?type=playlist&id=3778678',
-        'https://api.injahow.cn/meting/?type=playlist&id=3779629',
-        'https://api.injahow.cn/meting/?type=playlist&id=19723756',
-        'https://api.injahow.cn/meting/?type=playlist&id=913908853',
-        'https://api.injahow.cn/meting/?type=playlist&id=2003672301',
-        'https://api.injahow.cn/meting/?type=playlist&id=64321632',
-        'https://api.injahow.cn/meting/?type=playlist&id=26467411',
-        'https://api.injahow.cn/meting/?type=playlist&id=947776380',
-        'https://api.injahow.cn/meting/?type=playlist&id=2036189106',
+        'https://meting.qjqq.cn/?type=playlist&id=3778678',
+        'https://meting.qjqq.cn/?type=playlist&id=3779629',
+        'https://meting.qjqq.cn/?type=playlist&id=19723756',
+        'https://meting-api.mnchen.cn/?type=playlist&id=913908853',
+        'https://meting-api.mnchen.cn/?type=playlist&id=2003672301',
+        'https://meting-api.mnchen.cn/?type=playlist&id=64321632',
+        'https://api.loneapex.cn/?type=playlist&id=26467411',
+        'https://api.loneapex.cn/?type=playlist&id=947776380',
+        'https://api.loneapex.cn/?type=playlist&id=2036189106',
     ];
 
     apiUrls.forEach((apiUrl, index) => {

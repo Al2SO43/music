@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function handlePlaylist7() {
-        fetch('https://api.loneapex.cn/?type=playlist&id=26467411')
+        fetch('https://api.loneapex.cn/?type=playlist&id=2472290841')
             .then(response => response.json())
             .then(data => {
                 const audioList = data.map(item => ({
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const ap = new APlayer(options);
             })
             .catch(error => {
-                console.error('Error fetching the playlist from api.loneapex.cn (ID 26467411):', error);
+                console.error('Error fetching the playlist from api.loneapex.cn (ID 2472290841):', error);
             });
     }
 
@@ -224,6 +224,81 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     }
 
+    function handlePlaylist10() {
+        fetch('https://api.moeyao.cn/meting/?server=netease&type=playlist&id=85175934')
+            .then(response => response.json())
+            .then(data => {
+                const audioList = data.map(item => ({
+                    name: item.name,
+                    artist: item.artist.replace(/\\/g, ''),
+                    url: item.url.replace(/\\/g, ''),
+                    pic: item.cover.replace(/\\/g, ''),
+                    lrc: item.lrc.replace(/\\/g, '')
+                }));
+
+                const options = {
+                    container: document.getElementById('aplayer10'),
+                    audio: audioList,
+                    lrcType: 3
+                };
+
+                const ap = new APlayer(options);
+            })
+            .catch(error => {
+                console.error('Error fetching the playlist from api.moeyao.cn (ID 85175934):', error);
+            });
+    }
+
+    function handlePlaylist11() {
+        fetch('https://api.moeyao.cn/meting/?server=netease&type=playlist&id=26467411')
+            .then(response => response.json())
+            .then(data => {
+                const audioList = data.map(item => ({
+                    name: item.name,
+                    artist: item.artist.replace(/\\/g, ''),
+                    url: item.url.replace(/\\/g, ''),
+                    pic: item.cover.replace(/\\/g, ''),
+                    lrc: item.lrc.replace(/\\/g, '')
+                }));
+
+                const options = {
+                    container: document.getElementById('aplayer11'),
+                    audio: audioList,
+                    lrcType: 3
+                };
+
+                const ap = new APlayer(options);
+            })
+            .catch(error => {
+                console.error('Error fetching the playlist from api.moeyao.cn (ID 26467411):', error);
+            });
+    }
+
+    function handlePlaylist12() {
+        fetch('https://api.moeyao.cn/meting/?server=netease&type=playlist&id=2209538297')
+            .then(response => response.json())
+            .then(data => {
+                const audioList = data.map(item => ({
+                    name: item.name,
+                    artist: item.artist.replace(/\\/g, ''),
+                    url: item.url.replace(/\\/g, ''),
+                    pic: item.cover.replace(/\\/g, ''),
+                    lrc: item.lrc.replace(/\\/g, '')
+                }));
+
+                const options = {
+                    container: document.getElementById('aplayer12'),
+                    audio: audioList,
+                    lrcType: 3
+                };
+
+                const ap = new APlayer(options);
+            })
+            .catch(error => {
+                console.error('Error fetching the playlist from api.moeyao.cn (ID 2209538297):', error);
+            });
+    }
+
     handlePlaylist1();
     handlePlaylist2();
     handlePlaylist3();
@@ -233,6 +308,9 @@ document.addEventListener('DOMContentLoaded', function () {
     handlePlaylist7();
     handlePlaylist8();
     handlePlaylist9();
+    handlePlaylist10();
+    handlePlaylist11();
+    handlePlaylist12();
 });
 
 function displayTime() {
